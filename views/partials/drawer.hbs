@@ -1,0 +1,53 @@
+<div id="drawer">
+  <div class="drawer-navigation">
+    <i class="drawer-icon__close fa fa-times"></i>
+    <div class="drawer-header">
+      <div class="drawer-header__user-panel">
+        {{#if user.nickname}}
+          <span>
+            Привет,
+            {{user.nickname}}
+            !
+          </span>
+           <a href="/auth/logout">
+           <i class="fa fa-sign-out"></i>
+              Выйти
+            </a>
+        {{/if}}
+      </div>
+      <ul class="drawer-header__main-navigation">
+        <li>
+          <i class="fa fa-home"></i>
+          <a href="/">
+            Главная страница
+          </a>
+        </li>
+        {{#if user.nickname}}
+
+        {{else}}
+         <li>
+          <i class="fa fa-sign-in"></i> 
+          <a href="/auth/registration">
+            Зарегистрироваться
+          </a>
+        </li>
+        <li>
+          <i class="fa fa-sign-in"></i>
+          <a href="/auth/login">
+            Войти на сайт
+          </a>
+        </li>
+        {{/if}}
+
+        {{#if_eq user.role "admin"}}
+        <li>
+          <i class="fa fa-cog"></i>
+          <a href="/admin">
+            Админка
+          </a>
+        </li>
+        {{/if_eq}}
+      </ul>
+    </div>
+  </div>
+</div>

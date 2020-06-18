@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {{#if metaTags.img}}
+    <meta property="og:type" content="article" />
+    {{else}}
+    <meta property="og:type" content="website" />
+  {{/if}}
+  
+  <meta property="og:title" content="{{metaTags.title}}" />
+  <meta property="og:description" content="{{metaTags.description}}" />
+
+  {{#if metaTags.url}}
+    <meta property="og:url" content="{{metaTags.url}}" />
+    {{else}}
+    <meta property="og:url" content="https://about-eat.ru" />
+  {{/if}}
+
+  {{#if metaTags.img}}
+    <meta property="og:image" content="{{metaTags.img}}" />
+    <meta name="twitter:image" content="{{metaTags.img}}" /> 
+    {{else}}
+    <meta property="og:image" content="https://pp.userapi.com/c850732/v850732662/966c5/w_baqAP6jwU.jpg" />
+  {{/if}}
+
+  <meta name="twitter:title" content="{{metaTags.title}}" /> 
+  <meta name="twitter:description" content="{{metaTags.description}}" /> 
+  
+
+  <meta name="description" content="{{metaTags.description}}">
+  <meta name="keywords" content="{{metaTags.keywords}}">
+  
+  <link rel="stylesheet" href="/stylesheets/main.min.css">
+  {{#if metaTags.title}}
+  <title>{{metaTags.title}}</title>
+  {{/if}}
+</head>
+
+<body>

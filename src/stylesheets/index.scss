@@ -1,0 +1,10 @@
+@import "~normalize.css";
+@import "commons/var.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: $mainBackground;
+}
