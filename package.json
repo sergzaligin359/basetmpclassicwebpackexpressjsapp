@@ -32,7 +32,7 @@
     "sharp": "^0.25.4",
     "sitemap": "^6.1.5",
     "transliterate-cyrillic-text-to-latin-url": "^1.1.1",
-    "validator": "^13.1.1"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
